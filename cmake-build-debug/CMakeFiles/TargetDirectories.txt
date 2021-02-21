@@ -1,0 +1,3 @@
+C:/Users/Martin/Documents/GitHub/Lab2SM_Clion/cmake-build-debug/CMakeFiles/Lab2SM_Clion.dir
+C:/Users/Martin/Documents/GitHub/Lab2SM_Clion/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Martin/Documents/GitHub/Lab2SM_Clion/cmake-build-debug/CMakeFiles/rebuild_cache.dir
