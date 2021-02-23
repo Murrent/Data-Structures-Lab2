@@ -4,14 +4,13 @@
 
 int main( int argc, char* argv[] )
 {
-	const char* fName = argv[1];
-	
-	int* a = load_file(fName);
+    const char* fName = argv[1];
 
-	int size = a[0];
-	for ( int i = 1 ; i <= size ; i++ ) // note this loops from 1 <= i <= size
-	{
-		printf("%d\n", a[i]);
-	}
-    return 0;
+    int* a = load_file(fName);
+
+    int size = a[0];
+    for ( int i = 1 ; i <= size ; i++ ) // note this loops from 1 <= i <= size
+    {
+        printf("%d\n", a[i]);
+    }
 }

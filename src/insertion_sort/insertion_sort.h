@@ -5,6 +5,6 @@
 #ifndef LAB2SM_CLION_INSERTION_SORT_H
 #define LAB2SM_CLION_INSERTION_SORT_H
 
-#endif //LAB2SM_CLION_INSERTION_SORT_H
+void insertion_sort(int* array);
 
-int* insertion_sort(int* array);
+#endif //LAB2SM_CLION_INSERTION_SORT_H
