@@ -58,16 +58,16 @@ void countSortDescending(List* list, int exponent) {
     int i = 0;
     Node* tmp = NULL;
 
-    int* sortedArray = (int*)malloc(list->length * sizeof(int));
-    memset(sortedArray, 0, list->length * sizeof(int));
+    int* sortedArray = (int*)malloc(list->length * sizeof(int)); // Temporary array for the sorted array
+    memset(sortedArray, 0, list->length * sizeof(int)); //Setting values to 0
 
     int count[10] = { 0 };
 
     for (tmp = list->head; tmp; tmp = tmp->next)
         count[(tmp->key / exponent) % 10]++;
 
-    for (i = 1; i < 10; ++i)
-        count[i] += count[i - 1];
+    for (i = 8; i >= 0; --i) //Looping from top-1 to bottom
+        count[i] += count[i + 1]; //Adding the value of the element above
 
     for (tmp = list->tail; tmp; tmp = tmp->previous) {
         int tmpIndex = (tmp->key / exponent) % 10;
