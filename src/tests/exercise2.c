@@ -28,7 +28,7 @@ int main( int argc, char* argv[] )
 
     printf("\nmax %d\n", getMax(list));
 
-    radixSortDescending(list);
+    radixSortAscending(list);
 
     printf("Sorted array:\n");
     for (Node* tmp = list->head; tmp; tmp = tmp->next)

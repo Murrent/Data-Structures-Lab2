@@ -14,8 +14,23 @@ void insertion_sort(int* array) {
         while (i > 0 && array[i] > key) {
             array[i + 1] = array[i];
             i = i - 1;
-            plotArray(array, (int)n-1);
         }
         array[i + 1] = key;
     }
+}
+
+void insertion_sort_graphed(int* array) {
+    size_t n = array[0] + 1;
+    for (size_t j = 1; j < n; ++j) {
+        plotArray(array, (int)n, j);
+        int key = array[j];
+        size_t i = j - 1;
+        while (i > 0 && array[i] > key) {
+            //plotArray(array, (int)n, (int)i + 1);
+            array[i + 1] = array[i];
+            i = i - 1;
+        }
+        array[i + 1] = key;
+    }
+    plotArray(array, (int)n, 1);
 }
