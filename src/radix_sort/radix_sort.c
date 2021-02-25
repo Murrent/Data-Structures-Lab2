@@ -8,6 +8,13 @@
 #include <string.h>
 #include "../console/console.h"
 
+int *getIntArray(int length) {
+    int* sortedArray = (int*)malloc(length * sizeof(int)); // Temporary array for the sorted array
+    memset(sortedArray, 0, length * sizeof(int)); //Setting values to 0
+
+    return sortedArray;
+}
+
 int getMax(List* list) {
     Node* max = list->head;
     for (Node* tmp = list->head->next; tmp; tmp = tmp->next) {
@@ -21,8 +28,7 @@ void countSortAscending(List* list, int exponent) {
     int i = 0;
     Node* tmp = NULL;
 
-    int* sortedArray = (int*)malloc(list->length * sizeof(int));
-    memset(sortedArray, 0, list->length * sizeof(int));
+    int *sortedArray = getIntArray(list->length);
 
     int count[10] = { 0 };
 
@@ -59,8 +65,7 @@ void countSortDescending(List* list, int exponent) {
     int i = 0;
     Node* tmp = NULL;
 
-    int* sortedArray = (int*)malloc(list->length * sizeof(int)); // Temporary array for the sorted array
-    memset(sortedArray, 0, list->length * sizeof(int)); //Setting values to 0
+    int *sortedArray = getIntArray(list->length);
 
     int count[10] = { 0 };
 
@@ -97,8 +102,7 @@ void countSortPlotAscending(List* list, int exponent) {
     int i = 0;
     Node* tmp = NULL;
 
-    int* sortedArray = (int*)malloc(list->length * sizeof(int));
-    memset(sortedArray, 0, list->length * sizeof(int));
+    int *sortedArray = getIntArray(list->length);
 
     int count[10] = { 0 };
 
@@ -141,8 +145,7 @@ void countSortPlotDescending(List* list, int exponent) {
     int i = 0;
     Node* tmp = NULL;
 
-    int* sortedArray = (int*)malloc(list->length * sizeof(int)); // Temporary array for the sorted array
-    memset(sortedArray, 0, list->length * sizeof(int)); //Setting values to 0
+    int *sortedArray = getIntArray(list->length);
 
     int count[10] = { 0 };
 
@@ -170,6 +173,8 @@ void countSortPlotDescending(List* list, int exponent) {
     }
     free(sortedArray);
 }
+
+
 
 void radixSortPlotDescending(List* list) {
     int max = getMax(list);

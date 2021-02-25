@@ -9,26 +9,15 @@
 #include "../radix_sort/radix_sort.h"
 #include "../insertion_sort/insertion_sort.h"
 
-int main( int argc, char* argv[] )
+int main()
 {
-    const char* fName = argv[1];
+    List *listA = createList();
+    List *listB = createList();
 
-    int* a = load_file(fName);
+    int *arrayA[6] = { 0, 0, 0, 0, 0, 0 };
+    int *arrayB[6] = { 0, 0, 0, 0, 0, 0 };
 
-    int size = a[0];
-    printf("Input array:\n");
-    for ( int i = 1 ; i <= size ; i++ )
-    {
-        printf("%d\n", a[i]);
-    }
-    printf("\n");
-    insertion_sort_graphed(a);
 
-    printf("Sorted array:\n");
-    for ( int i = 1 ; i <= size ; i++ )
-    {
-        printf("%d\n", a[i]);
-    }
 
     return 0;
 }

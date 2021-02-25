@@ -25,8 +25,8 @@ int main( int argc, char* argv[] )
         insert(listB, createNode(a[i]));
     }
 
-    radixSortAscending(listA);
-    radixSortDescending(listB);
+    radixSortPlotAscending(listA);
+    radixSortPlotDescending(listB);
 
     insertion_sort_graphed(a);
 

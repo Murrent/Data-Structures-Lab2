@@ -12,5 +12,9 @@ void countSortAscending(List* list, int exponent);
 void radixSortAscending(List* list);
 void countSortDescending(List* list, int exponent);
 void radixSortDescending(List* list);
+void countSortPlotAscending(List* list, int exponent);
+void radixSortPlotAscending(List* list);
+void countSortPlotDescending(List* list, int exponent);
+void radixSortPlotDescending(List* list);
 
 #endif //LAB2SM_CLION_RADIX_SORT_H

@@ -26,7 +26,7 @@ void insertion_sort_graphed(int* array) {
         int key = array[j];
         size_t i = j - 1;
         while (i > 0 && array[i] > key) {
-            //plotArray(array, (int)n, (int)i + 1);
+            plotArray(array, (int)n, (int)i + 1);
             array[i + 1] = array[i];
             i = i - 1;
         }
