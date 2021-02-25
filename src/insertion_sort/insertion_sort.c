@@ -3,6 +3,7 @@
 //
 
 #include "insertion_sort.h"
+#include "../console/console.h"
 #include <stdio.h>
 
 void insertion_sort(int* array) {
@@ -13,6 +14,7 @@ void insertion_sort(int* array) {
         while (i > 0 && array[i] > key) {
             array[i + 1] = array[i];
             i = i - 1;
+            plotArray(array, (int)n-1);
         }
         array[i + 1] = key;
     }

@@ -14,6 +14,7 @@ typedef struct list_
 {
     Node* head;
     Node* tail;
+    int length;
 }List;
 
 List* createList();

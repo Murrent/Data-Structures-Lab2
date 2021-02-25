@@ -1,17 +1,15 @@
 //
-// Created by Martin on 2021-02-23.
+// Created by Martin on 2021-02-24.
 //
 
+/*
 #include <stdio.h>
 
 #include "../list/list.h"
 #include "../load_files/load_file.h"
-#include "../radix_sort/radix_sort.h"
 
 int main( int argc, char* argv[] )
 {
-    List* list = createList();
-
     const char* fName = argv[1];
 
     int* a = load_file(fName);
@@ -21,20 +19,14 @@ int main( int argc, char* argv[] )
     for ( int i = 1 ; i <= size ; i++ )
     {
         printf("%d\n", a[i]);
-        insert(list, createNode(a[i]));
     }
     printf("\n");
-    printList(list);
-
-    printf("\nmax %d\n", getMax(list));
-
-    radixSortDescending(list);
 
     printf("Sorted array:\n");
-    for (Node* tmp = list->head; tmp; tmp = tmp->next)
+    for ( int i = 1 ; i <= size ; i++ )
     {
-        printf("%d\n", tmp->key);
+        printf("%d\n", a[i]);
     }
 
     return 0;
-}
+}*/

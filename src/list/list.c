@@ -8,6 +8,7 @@ List* createList() {
     List* list = (List*)malloc(sizeof(List));
     list->head = NULL;
     list->tail = NULL;
+    list->length = 0;
     return list;
 }
 
@@ -50,6 +51,7 @@ int insert(List* list, Node* node) {
     node->next = list->head;
     node->previous = NULL;
     list->head = node;
+    list->length++;
     return 1;
 }
 
@@ -71,6 +73,7 @@ Node* detachNode(List* list, Node* node) {
     if (node->next != NULL)
         node->next->previous = node->previous;
     else list->tail = node->previous;
+    list->length--;
     return node;
 }
 
