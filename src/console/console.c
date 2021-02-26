@@ -17,7 +17,7 @@ void plotArray(const int* array, int size, int current) {
             printf(" <---");
         printf("\n");
     }
-    usleep(200000);
+    usleep(200000); // Sleeping for 200000 microseconds
 }
 
 void plotList(List* list, Node* current) {
@@ -30,5 +30,5 @@ void plotList(List* list, Node* current) {
             printf(" <---");
         printf("\n");
     }
-    usleep(200000);
+    usleep(200000); // Sleeping for 200000 microseconds
 }

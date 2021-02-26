@@ -21,20 +21,6 @@ int *getIntArray(int length) {
 }
 
 /**
- * Loops through the list and returns the key of the maximum value.
- * @param list
- * @return - The maximum key in the list.
- */
-int getMax(List* list) {
-    Node* max = list->head;
-    for (Node* tmp = list->head->next; tmp; tmp = tmp->next) {
-        if (tmp->key > max->key)
-            max = tmp;
-    }
-    return max->key;
-}
-
-/**
  * This functions sorts the list by the exponent in ascending order. This means if there are "n" exponents in the
  * maximum value of list, this function needs to run "n" number of times for each exponent.
  * @param list
@@ -74,7 +60,10 @@ void countSortAscending(List* list, int exponent) {
  * @param list
  */
 void radixSortAscending(List* list) {
-    int max = getMax(list);
+    Node *maxNode = maximum(list);
+    int max = 0;
+    if (maxNode)
+        max = maxNode->key;
 
     for (int exponent = 1; max / exponent > 0; exponent *= 10){
         countSortAscending(list, exponent);
@@ -119,7 +108,10 @@ void countSortDescending(List* list, int exponent) {
  * @param list
  */
 void radixSortDescending(List* list) {
-    int max = getMax(list);
+    Node *maxNode = maximum(list);
+    int max = 0;
+    if (maxNode)
+        max = maxNode->key;
 
     for (int exponent = 1; max / exponent > 0; exponent *= 10){
         countSortDescending(list, exponent);
@@ -164,7 +156,10 @@ void countSortPlotAscending(List* list, int exponent) {
 }
 
 void radixSortPlotAscending(List* list) {
-    int max = getMax(list);
+    Node *maxNode = maximum(list);
+    int max = 0;
+    if (maxNode)
+        max = maxNode->key;
 
     for (int exponent = 1; max / exponent > 0; exponent *= 10){
         plotList(list, NULL);
@@ -209,7 +204,10 @@ void countSortPlotDescending(List* list, int exponent) {
 
 
 void radixSortPlotDescending(List* list) {
-    int max = getMax(list);
+    Node *maxNode = maximum(list);
+    int max = 0;
+    if (maxNode)
+        max = maxNode->key;
 
     for (int exponent = 1; max / exponent > 0; exponent *= 10){
         plotList(list, NULL);
