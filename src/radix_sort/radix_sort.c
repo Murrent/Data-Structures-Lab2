@@ -8,6 +8,11 @@
 #include <string.h>
 #include "../console/console.h"
 
+/**
+ * Creates and array of integers with the size of length and sets all values to 0.
+ * @param length - size of array.
+ * @return - the created int array.
+ */
 int *getIntArray(int length) {
     int* sortedArray = (int*)malloc(length * sizeof(int)); // Temporary array for the sorted array
     memset(sortedArray, 0, length * sizeof(int)); //Setting values to 0
@@ -15,6 +20,11 @@ int *getIntArray(int length) {
     return sortedArray;
 }
 
+/**
+ * Loops through the list and returns the key of the maximum value.
+ * @param list
+ * @return - The maximum key in the list.
+ */
 int getMax(List* list) {
     Node* max = list->head;
     for (Node* tmp = list->head->next; tmp; tmp = tmp->next) {
@@ -103,7 +113,11 @@ void countSortDescending(List* list, int exponent) {
     }
     free(sortedArray);
 }
-
+/**
+ * This function remains the same as radixSortAscending, all we need to do is call the countSortDescending function
+ * instead.
+ * @param list
+ */
 void radixSortDescending(List* list) {
     int max = getMax(list);
 
@@ -111,6 +125,10 @@ void radixSortDescending(List* list) {
         countSortDescending(list, exponent);
     }
 }
+
+/**
+ * The functions below are the same radix function and count sorts but the also plot a graph of the list.
+ */
 
 void countSortPlotAscending(List* list, int exponent) {
     int i = 0;
