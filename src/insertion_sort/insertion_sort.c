@@ -7,8 +7,8 @@
 #include <stdio.h>
 
 /**
- * Insertion sort loops through the array and for each element it loops backwards to find the appropriate spot for the
- * element.
+ * Insertion sort loops through the array and for each element it loops backwards from it's spot to find the appropriate
+ * spot for the element.
  * @param array
  */
 void insertionSort(int* array) {
