@@ -1,0 +1,51 @@
+src/list/list.c
+src/list/list.h
+list implements the doubly linked list from the previous lab
+
+src/radix_sort/radix_sort.c
+src/radix_sort/radix_sort.h
+radix_sort implements the Radix sort (LSD) algorithm. It contains
+the function radixSortPlotDescending and radixSortPlotAscending
+which is used in this exercise.
+
+src/insertion_sort/insertion_sort.c
+src/insertion_sort/insertion_sort.h
+insertion_sort implements the Insertion sort algorithm. It contains
+the function insertionSortGraphed function which sorts an array using
+insertion sort and graphs the array every time a new element is
+visited.
+
+src/console/console.c
+src/console/console.h
+console implements the graphing functions which draws an array or list
+and point at an element. Before proceeding, the function waits for 0.2s.
+
+In the test we take the file path from argv[1], read the file
+content add it into an array. We then copy the elements into
+two lists and sort the lists in Ascending and Descending order using
+Radix sort (LSD). We then sort the original array using insertion sort.
+While the lists and arrays being sorted, it's content is graphed in the
+console with an arrow pointing towards the currently visited element.
+
+To compile the program we used CMakeLists.txt:
+    cmake_minimum_required(VERSION 3.17)
+    project(Lab2SM_Clion C)
+
+    set(CMAKE_C_STANDARD 11)
+
+    add_executable(exercise4
+            src/tests/exercise4.c
+            src/list/list.c
+            src/list/list.h
+            src/load_files/load_file.c
+            src/load_files/load_file.h
+            src/insertion_sort/insertion_sort.c
+            src/insertion_sort/insertion_sort.h
+            src/radix_sort/radix_sort.c
+            src/radix_sort/radix_sort.h
+            src/console/console.c
+            src/console/console.h)
+
+To run the program we need to pass the file path to a sorting problem:
+    On windows we used Command Prompt:
+        start exercise4.exe [filepath]

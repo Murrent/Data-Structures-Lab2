@@ -1,8 +1,7 @@
+// Martin Vickgren, Samson Tesfalem
 //
 // Created by Martin on 2021-02-25.
 //
-
-#include <stdio.h>
 
 #include "../list/list.h"
 #include "../load_files/load_file.h"
