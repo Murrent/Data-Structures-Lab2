@@ -5,7 +5,7 @@
 #ifndef LAB2SM_CLION_INSERTION_SORT_H
 #define LAB2SM_CLION_INSERTION_SORT_H
 
-void insertion_sort(int* array);
-void insertion_sort_graphed(int* array);
+void insertionSort(int* array);
+void insertionSortGraphed(int* array);
 
 #endif //LAB2SM_CLION_INSERTION_SORT_H

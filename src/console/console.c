@@ -8,7 +8,7 @@
 #include <unistd.h>
 
 void plotArray(const int* array, int size, int current) {
-    system("cls");
+    system("cls"); // Clearing console
     for (int index = 1; index < size; ++index) {
         for (int number = 0; number < array[index]; ++number) {
             printf("%c", '#');
@@ -21,7 +21,7 @@ void plotArray(const int* array, int size, int current) {
 }
 
 void plotList(List* list, Node* current) {
-    system("cls");
+    system("cls"); // Clearing console
     for (Node* node = list->head; node; node = node->next) {
         for (int number = 0; number < node->key; ++number) {
             printf("%c", '#');

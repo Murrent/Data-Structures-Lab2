@@ -40,8 +40,8 @@ int main()
     radixSortAscending(listA);
     radixSortDescending(listB);
 
-    insertion_sort(arrayA);
-    insertion_sort(arrayB);
+    insertionSort(arrayA);
+    insertionSort(arrayB);
 
     for (Node* tmp = listA->head; tmp; tmp = tmp->next)
         printf("listA: %d\n", tmp->key);

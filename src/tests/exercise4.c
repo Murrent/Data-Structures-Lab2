@@ -39,7 +39,7 @@ int main( int argc, char* argv[] )
     radixSortPlotAscending(listA);
     radixSortPlotDescending(listB);
 
-    insertion_sort_graphed(a);
+    insertionSortGraphed(a);
 
     return 0;
 }

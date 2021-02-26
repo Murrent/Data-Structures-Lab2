@@ -27,7 +27,7 @@ int main( int argc, char* argv[] )
         printf("%d\n", a[i]);
     }
     printf("\n");
-    insertion_sort(a);
+    insertionSort(a);
 
     printf("Sorted array:\n");
     for ( int i = 1 ; i <= size ; i++ )
