@@ -1,3 +1,4 @@
+// Martin Vickgren, Samson Tesfalem
 //
 // Created by Martin on 2021-02-24.
 //
@@ -7,7 +8,6 @@
 
 #include "../list/list.h"
 
-int getMax(List* list);
 void countSortAscending(List* list, int exponent);
 void radixSortAscending(List* list);
 void countSortDescending(List* list, int exponent);
