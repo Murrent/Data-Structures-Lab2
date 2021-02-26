@@ -1,6 +1,6 @@
-
-Create two lists with each for a student personal number  
-
+Create two lists and two arrays with each for a student personal number. 
+To test our implementations we used radixSortAsending for the first list and the other with radixSortDescending function. 
+For the arrays we used insertionSort function. 
 
 
 To compile the program we used CMakeLists.txt:
@@ -29,3 +29,4 @@ src/radix_sort/radix_sort.c
 src/radix_sort/radix_sort.h
 src/insertion_sort/insertion_sort.c
 src/insertion_sort/insertion_sort.h
+
