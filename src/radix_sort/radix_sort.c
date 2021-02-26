@@ -24,6 +24,12 @@ int getMax(List* list) {
     return max->key;
 }
 
+/**
+ * This functions sorts the list by the exponent in ascending order. This means if there are "n" exponents in the
+ * maximum value of list, this function needs to run "n" number of times for each exponent.
+ * @param list
+ * @param exponent
+ */
 void countSortAscending(List* list, int exponent) {
     int i = 0;
     Node* tmp = NULL;
@@ -52,7 +58,11 @@ void countSortAscending(List* list, int exponent) {
     }
     free(sortedArray);
 }
-
+/**
+ * This function finds the maximum element in the list and loops through the amount of exponents there are in it.
+ * countSortAscending is called for every exponent in the maximum value of list.
+ * @param list
+ */
 void radixSortAscending(List* list) {
     int max = getMax(list);
 
@@ -60,7 +70,11 @@ void radixSortAscending(List* list) {
         countSortAscending(list, exponent);
     }
 }
-
+/**
+ * This function does the same as countSortAscending but sorts it in descending order.
+ * @param list
+ * @param exponent
+ */
 void countSortDescending(List* list, int exponent) {
     int i = 0;
     Node* tmp = NULL;

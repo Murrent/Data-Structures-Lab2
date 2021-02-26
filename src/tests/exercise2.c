@@ -8,6 +8,14 @@
 #include "../load_files/load_file.h"
 #include "../radix_sort/radix_sort.h"
 
+/**
+ * This program takes the filepath from argc[1], loads the file and adds it's content into a list of integers.
+ * The input is first printed and stored in the list. Then we use radix sort the ascending version.
+ * And then the sorted list is printed.
+ * @param argc
+ * @param argv
+ * @return
+ */
 int main( int argc, char* argv[] )
 {
     List* list = createList();
@@ -24,17 +32,11 @@ int main( int argc, char* argv[] )
         insert(list, createNode(a[i]));
     }
     printf("\n");
-    printList(list);
-
-    printf("\nmax %d\n", getMax(list));
 
     radixSortAscending(list);
 
-    printf("Sorted array:\n");
-    for (Node* tmp = list->head; tmp; tmp = tmp->next)
-    {
-        printf("%d\n", tmp->key);
-    }
+    printf("Sorted list:\n");
+    printList(list);
 
     return 0;
 }

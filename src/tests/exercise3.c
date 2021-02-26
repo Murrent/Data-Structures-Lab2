@@ -8,6 +8,12 @@
 #include "../load_files/load_file.h"
 #include "../radix_sort/radix_sort.h"
 
+/**
+ * This program does the same as exercise2.c but is sorting the list in descending order.
+ * @param argc
+ * @param argv
+ * @return
+ */
 int main( int argc, char* argv[] )
 {
     List* list = createList();
@@ -24,17 +30,11 @@ int main( int argc, char* argv[] )
         insert(list, createNode(a[i]));
     }
     printf("\n");
-    printList(list);
-
-    printf("\nmax %d\n", getMax(list));
 
     radixSortDescending(list);
 
-    printf("Sorted array:\n");
-    for (Node* tmp = list->head; tmp; tmp = tmp->next)
-    {
-        printf("%d\n", tmp->key);
-    }
+    printf("Sorted list:\n");
+    printList(list);
 
     return 0;
 }

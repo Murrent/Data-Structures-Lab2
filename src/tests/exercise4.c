@@ -9,6 +9,17 @@
 #include "../radix_sort/radix_sort.h"
 #include "../insertion_sort/insertion_sort.h"
 
+/**
+ * This program takes the filepath from argc[1], loads the file and adds it's content into an integer array and copy it
+ * over to two lists of integers.
+ * listA is sorted in ascending order and is displayed as a graph in the console each time an element is checked or
+ * moved.
+ * listB is sorted in descending order and also displayed the same way as listA.
+ * The integer array is now sorted using insertion sort and displayed the same way as the lists.
+ * @param argc
+ * @param argv
+ * @return
+ */
 int main( int argc, char* argv[] )
 {
     List* listA = createList();
