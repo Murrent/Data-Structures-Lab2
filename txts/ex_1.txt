@@ -1,0 +1,25 @@
+
+In exercise 1 we start by loading the file content by using the same code as the test load and store them in an array A. 
+Then we use the insertion sort to organize the numbers in the array which is what the insertionSort function duos. 
+Insertion sort loops through the array and for each element it loops backwards from it's spot to find the appropriate. 
+
+To compile the program we used CMakeLists.txt:
+   cmake_minimum_required(VERSION 3.17)
+   project(Lab2SM_Clion C)
+
+   set(CMAKE_C_STANDARD 11)
+
+add_executable(exercise1
+        src/tests/exercise1.c
+        src/load_files/load_file.h
+        src/load_files/load_file.c
+        src/list/list.c
+        src/list/list.h
+        src/insertion_sort/insertion_sort.c
+        src/insertion_sort/insertion_sort.h
+        src/console/console.c
+        src/console/console.h)
+
+file that was used:
+src/insertion_sort/insertion_sort.c
+src/insertion_sort/insertion_sort.h

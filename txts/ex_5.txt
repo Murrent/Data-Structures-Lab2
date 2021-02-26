@@ -1,0 +1,31 @@
+
+Create two lists with each for a student personal number  
+
+
+
+To compile the program we used CMakeLists.txt:
+   cmake_minimum_required(VERSION 3.17)
+   project(Lab2SM_Clion C)
+
+   set(CMAKE_C_STANDARD 11)
+
+add_executable(exercise5
+        src/tests/exercise5.c
+        src/list/list.c
+        src/list/list.h
+        src/load_files/load_file.c
+        src/load_files/load_file.h
+        src/insertion_sort/insertion_sort.c
+        src/insertion_sort/insertion_sort.h
+        src/radix_sort/radix_sort.c
+        src/radix_sort/radix_sort.h
+        src/console/console.c
+        src/console/console.h)
+
+file that was used:
+src/list/list.c
+src/list/list.h
+src/radix_sort/radix_sort.c
+src/radix_sort/radix_sort.h
+src/insertion_sort/insertion_sort.c
+src/insertion_sort/insertion_sort.h
