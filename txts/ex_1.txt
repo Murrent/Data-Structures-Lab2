@@ -1,15 +1,23 @@
+file that was used:
+src/insertion_sort/insertion_sort.c
+src/insertion_sort/insertion_sort.h
+insertion_sort implements the Insertion sort algorithm. It contains
+the function insertionSort function which sorts an array using the
+insertion sort method.
 
-In exercise 1 we start by loading the file content by using the same code as the test load and store them in an array A. 
-Then we use the insertion sort to organize the numbers in the array which is what the insertionSort function duos. 
-Insertion sort loops through the array and for each element it loops backwards from it's spot to find the appropriate. 
+In exercise 1 we start by loading the file content by using the same code as the test load and store them in an array
+"a".
+Then we use the insertion sort to organize the numbers in the array.
+Insertion sort loops through the array and for each element it loops backwards from it's spot to find the appropriate
+new spot.
 
 To compile the program we used CMakeLists.txt:
-   cmake_minimum_required(VERSION 3.17)
-   project(Lab2SM_Clion C)
+    cmake_minimum_required(VERSION 3.17)
+    project(Lab2SM_Clion C)
 
-   set(CMAKE_C_STANDARD 11)
+    set(CMAKE_C_STANDARD 11)
 
-add_executable(exercise1
+    add_executable(exercise1
         src/tests/exercise1.c
         src/load_files/load_file.h
         src/load_files/load_file.c
@@ -20,6 +28,7 @@ add_executable(exercise1
         src/console/console.c
         src/console/console.h)
 
-file that was used:
-src/insertion_sort/insertion_sort.c
-src/insertion_sort/insertion_sort.h
+To run the program we need to pass the file path to a sorting problem:
+    On windows we used Command Prompt:
+        start exercise1.exe [filepath]
+
