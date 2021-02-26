@@ -1,4 +1,3 @@
-file that was used:
 src/insertion_sort/insertion_sort.c
 src/insertion_sort/insertion_sort.h
 insertion_sort implements the Insertion sort algorithm. It contains

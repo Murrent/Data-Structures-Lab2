@@ -1,5 +1,21 @@
-Create two lists and two arrays with each for a student personal number. 
-To test our implementations we used radixSortAsending for the first list and the other with radixSortDescending function. 
+src/list/list.c
+src/list/list.h
+list implements the doubly linked list from the previous lab
+
+src/radix_sort/radix_sort.c
+src/radix_sort/radix_sort.h
+radix_sort implements the Radix sort (LSD) algorithm. It contains
+the functions radixSortAscending and radixSortDescending which is used in this exercise.
+
+src/insertion_sort/insertion_sort.c
+src/insertion_sort/insertion_sort.h
+insertion_sort implements the Insertion sort algorithm. It contains
+the function insertionSort function which sorts an array using the
+insertion sort method.
+
+Create two lists and two arrays with each for a student personal number.
+To test our implementations we used radixSortAscending for the first list and the other with radixSortDescending
+function.
 For the arrays we used insertionSort function. 
 
 
@@ -9,7 +25,7 @@ To compile the program we used CMakeLists.txt:
 
    set(CMAKE_C_STANDARD 11)
 
-add_executable(exercise5
+    add_executable(exercise5
         src/tests/exercise5.c
         src/list/list.c
         src/list/list.h
@@ -22,11 +38,7 @@ add_executable(exercise5
         src/console/console.c
         src/console/console.h)
 
-file that was used:
-src/list/list.c
-src/list/list.h
-src/radix_sort/radix_sort.c
-src/radix_sort/radix_sort.h
-src/insertion_sort/insertion_sort.c
-src/insertion_sort/insertion_sort.h
+To run the program we need to pass the file path to a sorting problem:
+    On windows we used Command Prompt:
+        start exercise5.exe [filepath]
 
